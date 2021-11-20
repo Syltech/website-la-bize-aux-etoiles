@@ -1,4 +1,11 @@
 evenements:
+  - date: 2022-07-28T16:07:35.408Z
+    heure: 15:00
+    titre: Nuit des Etoiles 2022
+    description: C'est la fête ! Fusées à eau, conférence, observation du soleil, du
+      ciel, planètes et tout ! Venez !
+    ville: Bize Minervois
+    localisation: '{"type":"Point","coordinates":[2.8693736,43.3108618]}'
   - date: 2022-02-24T16:43:56.289Z
     heure: 21:00
     titre: ✨ Soirée d'observation
