@@ -1,0 +1,24 @@
+{
+  "name": "lbae-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syltech/website-la-bize-aux-etoiles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syltech/website-la-bize-aux-etoiles/issues"
+  },
+  "homepage": "https://github.com/Syltech/website-la-bize-aux-etoiles#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
