@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: master 
+local_backend: true
+locale: fr
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+collections:
+  - label: "Général"
+    name: "general"
+    editor: 
+      preview: false
+    files:
+      - label: "Présentation"
+        name: "presentation"
+        file: "src/_data/presentation.yaml"
+        fields: 
+          - label: "Accroche"
+            required: true
+            hint: "Phrase d'accroche en haut du site"
+            name: "accroche"
+            widget: "string"
+          - label: "Présentation"
+            required: true
+            hint: "Petite phrase pour présenter l'association"
+            name: "phrase"
+            widget: "text"
+  - label: "Réunions & Evènements"
+    name: "reunions_events"
+    editor:
+      preview: false
+    files: 
+      - label: "Reunions"
+        name: "reunions"
+        file: "src/_data/reunions.yaml"
+        fields: 
+          - label: "Réunions"
+            name: reunions
+            widget: list
+            summary :  '{{fields.date}} - {{fields.descriptif}}'
+            add_to_top: true
+            fields: 
+              - label: Date
+                name: date
+                widget: date
+                date_format: "DD/MM/YYYY"
+              - label: Heure
+                name: heure
+                widget: string
+                pattern: ['\d{2}:\d{2}', 'doit être au format HH:MM']
+              - label: Descriptif
+                name: descriptif
+                widget: string
+                hint: "Court descriptif de la réunion"
+      - label: "Evènements"
+        name: "evenements"
+        file: "src/_data/evenements.yaml"
+        fields: 
+          - label: "Evènements"
+            name: evenements
+            widget: list
+            summary :  '{{fields.date}} - {{fields.ville}} - {{fields.titre}}'
+            add_to_top: true
+            fields: 
+              - label: Date
+                name: date
+                widget: date
+                date_format: "DD/MM/YYYY"
+              - label: Heure
+                name: heure
+                widget: string
+                pattern: ['\d{2}:\d{2}', 'doit être au format HH:MM']
+              - label: Titre
+                name: titre
+                widget: string
+                hint: "Titre de l'évènement (ne doit pas contenir le nom du lieu)"
+              - label: Description
+                name: description
+                widget: text
+              - label: Lien pour inscription
+                name: inscription
+                widget: string
+                hint: "Laisser vide si aucune inscription nécessaire"
+                required: false
+              - label: Ville
+                name: ville
+                hint: "Le nom de la ville/village à afficher sur le bouton"
+                widget: string
+              - label: Localisation
+                name: localisation
+                widget: map
+

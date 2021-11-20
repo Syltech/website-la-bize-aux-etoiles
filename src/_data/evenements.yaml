@@ -1,0 +1,25 @@
+evenements:
+  - date: 2022-02-24T16:43:56.289Z
+    heure: 21:00
+    titre: ✨ Soirée d'observation
+    description: Venez observer avec nous la conjonction de deux galaxies, oui,
+      c'est l'apocalypse mais on va passer une bonne soirée
+    inscription: https://google.fr
+    ville: Canet d'Aude
+    localisation: '{"type":"Point","coordinates":[2.8366442,43.219698]}'
+  - date: 2022-02-05T16:22:32.503Z
+    heure: 21:30
+    titre: Nuit des étoiles
+    description: Retrouvez-nous pour un atelier fusées à eaux suivi d'un repas tiré
+      du sac... Puis observation du ciel avec les télescopes des membres de
+      l'association !
+    ville: Bize Minervois
+    localisation: '{"type":"Point","coordinates":[2.8701653,43.3131944]}'
+  - date: 2021-12-04T16:14:25.707Z
+    localisation: '{"type":"Point","coordinates":[2.8718809,43.3133802]}'
+    ville: Bize Minervois
+    heure: 16:00
+    titre: 🚀 Atelier fusées à eaux
+    description: |-
+      Venez créer et lancer des fusées à eau avec nous ! 
+      Atelier ouvert aux petits et aux grands 😎

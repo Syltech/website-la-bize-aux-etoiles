@@ -1,0 +1,22 @@
+<section id="reunions" class="my-5 pt-md-5">
+  <div class="container">
+    <h2 class="mt-5 mb-3 text-white">Prochaines réunions</h2>
+    <div class="row g-3">
+      {{#each (sortAndFilterByDate reunions.reunions)}}
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{formattedDate.weekDay}}
+                {{formattedDate.day}}
+                {{formattedDate.month}}
+                -
+                {{heure}}
+              </h5>
+              <p class="card-text">{{descriptif}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

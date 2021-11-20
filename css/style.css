@@ -28,8 +28,8 @@ body {
   font-size: 1.25rem;
 }
 
-.horizon {
-  /* margin-top: -4rem; */
+#reunions .card-title {
+  text-transform: capitalize;
 }
 
 #evenements {

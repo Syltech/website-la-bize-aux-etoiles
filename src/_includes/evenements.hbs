@@ -1,0 +1,222 @@
+<section id="evenements">
+  <img src="img/layered-peaks-haikei.svg" alt="" width="100%" />
+  <div class="container py-5">
+    <h2 class="mb-3 text-white">Prochains évènements publics</h2>
+    <div class="row g-3 align-items-stretch pb-5">
+      {{#each (sortAndFilterByDate evenements.evenements)}}
+        <div class="col-xl-6">
+          <div class="card p-1 bg-light">
+            <div class="row g-0">
+              <div
+                class="col-sm-3 px-2 py-3 text-center text-light bg-dark d-flex flex-column justify-content-center align-items-center rounded date"
+              >
+                <div class="lh-1 pb-sm-2 jour">
+                  {{formattedDate.weekDay}}
+                  <span
+                    class="d-sm-block fs-2 fw-bold jour-numerique"
+                  >{{formattedDate.day}}</span>
+                  {{formattedDate.month}}
+                </div>
+
+                <div class="heure fs-4">{{heure}}</div>
+              </div>
+              <div class="col-sm-7 py-3 card-body">
+                <h5 class="card-title">{{titre}}</h5>
+                <p class="card-text">
+                  {{description}}
+                </p>
+              </div>
+              <div class="actions col-sm-2 d-flex flex-column">
+                {{#if inscription}}
+                  <a
+                    role="button"
+                    class="btn btn-primary d-flex flex-column flex-fill justify-content-center align-items-center mb-2"
+                    href="{{inscription}}"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-geo-alt-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+                      ></path>
+                    </svg>
+                    Inscription
+                  </a>
+                {{/if}}
+                <a
+                  role="button"
+                  class="btn btn-success d-flex flex-column flex-fill justify-content-center align-items-center"
+                  href="{{{linkMaps localisation}}}"
+                  target="_blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-geo-alt-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    ></path>
+                  </svg>
+                  {{ville}}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+      {{! <div class="col-xl-6">
+        <div class="card p-1 bg-light">
+          <div class="row g-0">
+            <div
+              class="col-sm-3 px-2 py-3 text-center text-light bg-dark d-flex flex-column justify-content-center align-items-center rounded date"
+            >
+              <div class="lh-1 pb-sm-2 jour">
+                Vendredi
+                <span class="d-sm-block fs-2 fw-bold jour-numerique">25</span>
+                novembre
+              </div>
+
+              <div class="heure fs-4">21h30</div>
+            </div>
+            <div class="col-sm-7 py-3 card-body">
+              <h5 class="card-title">Nuit des étoiles</h5>
+              <p class="card-text">
+                Retrouvez-nous pour un atelier fusées à eaux suivi d'un repas
+                tiré du sac... Puis observation du ciel avec les télescopes des
+                membres de l'association !
+              </p>
+            </div>
+            <div class="actions col-sm-2 d-flex flex-column">
+              <a
+                role="button"
+                class="btn btn-primary d-flex flex-column flex-fill justify-content-center align-items-center mb-2"
+                href="http://maps.apple.com/?q=Bize-Minervois,France"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
+                  ></path>
+                </svg>
+                Inscription
+              </a>
+              <a
+                role="button"
+                class="btn btn-success d-flex flex-column flex-fill justify-content-center align-items-center"
+                href="http://maps.apple.com/?q=Bize-Minervois,France"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                  ></path>
+                </svg>
+                Bize Minervois
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card p-1 bg-light">
+          <div class="row g-0">
+            <div
+              class="col-sm-3 px-2 py-3 text-center text-light bg-dark d-flex flex-column justify-content-center align-items-center rounded date"
+            >
+              <div class="lh-1 pb-sm-2 jour">
+                Vendredi
+                <span class="d-sm-block fs-2 fw-bold jour-numerique">12</span>
+                décembre
+              </div>
+
+              <div class="heure fs-4">18h00</div>
+            </div>
+            <div class="col-sm-7 py-3 card-body">
+              <h5 class="card-title">Atelier découverte</h5>
+              <p class="card-text">
+                Vous voulez faire un cadeau ? Offrir un télescope ? Venez nous
+                rencontrer pour faire un bon achat que vous utiliserez
+              </p>
+            </div>
+            <button type="button" class="btn btn-success col-sm-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                ></path>
+              </svg>
+              Bize Minervois
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card p-1 bg-light">
+          <div class="row g-0">
+            <div
+              class="col-sm-3 px-2 py-3 text-center text-light bg-dark d-flex flex-column justify-content-center align-items-center rounded date"
+            >
+              <div class="lh-1 pb-sm-2 jour">
+                Samedi
+                <span class="d-sm-block fs-2 fw-bold jour-numerique">23</span>
+                décembre
+              </div>
+
+              <div class="heure fs-4">14h00</div>
+            </div>
+            <div class="col-sm-7 py-3 card-body">
+              <h5 class="card-title">Atelier Fusées à eau</h5>
+              <p class="card-text">
+                Pour les petits et ceux qui ont oublié de grandir, venez
+                construire et lancer des fusées à eau !
+              </p>
+            </div>
+            <button type="button" class="btn btn-success col-sm-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                ></path>
+              </svg>
+              Bize Minervois
+            </button>
+          </div>
+        </div>
+      </div> }}
+    </div>
+  </div>
+  <img src="img/layered-peaks-haikei2.svg" alt="" width="100%" />
+</section>
