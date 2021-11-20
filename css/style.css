@@ -1,0 +1,39 @@
+:root {
+  --black: #231f20;
+}
+
+html,
+body {
+  font-size: 1rem;
+  font-family: "Glory", sans-serif;
+  background: var(--black);
+}
+
+.sky-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 12, 22, 0) 0%,
+    rgba(68, 84, 119, 1) 61%,
+    rgba(163, 157, 145, 1) 100%,
+    rgba(250, 123, 20, 1) 100%
+  );
+}
+
+#navbar .active {
+  border-bottom: thin solid black;
+}
+
+.page-header {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.horizon {
+  /* margin-top: -4rem; */
+}
+
+#evenements {
+  background: url(/img/zebra.png), url(/img/Helix_Nebula.jpg);
+  background-attachment: fixed;
+  background-position: center;
+}
