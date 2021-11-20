@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
-  branch: master 
+  branch: main
+  repo: Syltech/website-la-bize-aux-etoiles
 local_backend: false
 locale: fr
 media_folder: "img/uploads"
