@@ -1,4 +1,11 @@
 evenements:
+  - date: 2022-01-21T13:46:58.941Z
+    heure: 20:30
+    titre: Nuit des étoiles d'hiver
+    description: Ceci est une nuit des étoiles proposée en plein hiver pour observer
+      les objets du ciel profond
+    ville: Bize Minervois
+    localisation: '{"type":"Point","coordinates":[2.8689444,43.3143924]}'
   - date: 2022-07-28T16:07:35.408Z
     heure: 15:00
     titre: Nuit des Etoiles 2022
