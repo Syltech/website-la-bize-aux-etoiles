@@ -1,5 +1,5 @@
 evenements:
-  - date: 2022-05-07T12:44:09.402Z
+  - date: 2022-05-06T22:00:00.000Z
     heure: 15:00
     titre: Observation de la Lune et du Soleil
     description: >-
@@ -13,8 +13,8 @@ evenements:
       Parking sur le champs de foire
 
       Entrée par l'ancien camping (attention les portes du Stade seront fermées)
-    ville: Bize Minervois - Stade 43.31440376340026, 2.8689610353041575
-    localisation: '{"type":"Point","coordinates":[2.868997,43.3143992]}'
+    ville: Bize Minervois
+    localisation: '{"type":"Point","coordinates":[2.8689566,43.3143865]}'
   - date: 2022-03-26T16:55:47.742Z
     heure: 09:00
     titre: Forum des associations
