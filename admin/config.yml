@@ -43,8 +43,10 @@ collections:
             fields: 
               - label: Date
                 name: date
-                widget: date
+                widget: datetime
                 date_format: "DD/MM/YYYY"
+                time_format: false
+                format: "YYYY-MM-DD"
               - label: Heure
                 name: heure
                 widget: string
@@ -65,8 +67,10 @@ collections:
             fields: 
               - label: Date
                 name: date
-                widget: date
+                widget: datetime
                 date_format: "DD/MM/YYYY"
+                time_format: false
+                format: "YYYY-MM-DD"
               - label: Heure
                 name: heure
                 widget: string
