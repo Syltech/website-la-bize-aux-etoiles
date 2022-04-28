@@ -1,6 +1,7 @@
 const yaml = require("js-yaml");
 const moment = require("moment");
 moment.locale("fr");
+moment;
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", (contents) => {
@@ -22,10 +23,10 @@ module.exports = function (eleventyConfig) {
       .map((a) => ({
         ...a,
         formattedDate: {
-          weekDay: moment(a.date).format("dddd"),
-          day: moment(a.date).format("DD"),
-          month: moment(a.date).format("MMMM"),
-          year: moment(a.date).format("YYYY"),
+          weekDay: moment.utc(a.date).format("dddd"),
+          day: moment.utc(a.date).format("DD"),
+          month: moment.utc(a.date).format("MMMM"),
+          year: moment.utc(a.date).format("YYYY"),
         },
       }));
   });
