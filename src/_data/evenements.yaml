@@ -1,4 +1,11 @@
 evenements:
+  - date: 2022-07-31
+    heure: 21:00
+    titre: Soirée d’observation
+    description: Rejoignez-nous pour une soirée d’observation des planètes et
+      galaxies à l’œil nu et avec des télescopes!
+    ville: Canet d’Aude
+    localisation: '{"type":"Point","coordinates":[2.8367479,43.220573]}'
   - date: 2022-05-07
     heure: 15:00
     titre: Observation de la Lune et du Soleil
