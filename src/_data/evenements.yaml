@@ -1,4 +1,18 @@
 evenements:
+  - date: 2022-08-06
+    heure: 17:00
+    description: >-
+      De 17h00 à 19h00 construction et lancement de fusées à eau avec pas de tir
+      informatisé.
+
+      De 19h00 à 21h00 repas tiré du sac. Présentation de maquettes et des télescopes.
+
+      A la tombée de la nuit présentation du ciel , vidéo projection puis découverte des constellations au moyen de lasers.
+
+      Observation de la Lune, des planètes et des objets du ciel profond avec plusieurs télescopes et lunettes ! Et si vous avez votre matériel, que vous sachiez vous en servir ou que vous souhaitiez découvrir, n'hésitez pas à l'amener avec vous !
+    titre: Nuit des Etoiles 2022
+    ville: Bize Minervois
+    localisation: '{"type":"Point","coordinates":[2.8690726,43.3135424]}'
   - date: 2022-07-31
     heure: 21:00
     titre: Soirée d’observation
