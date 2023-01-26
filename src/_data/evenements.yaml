@@ -1,4 +1,11 @@
 evenements:
+  - date: 2023-02-11
+    heure: 21:00
+    titre: Nuit des étoiles d'hiver
+    description: Venez découvrir les beautés du ciel d'hiver, nébuleuse d'Orion,
+      Mars, et même une comète qui vient nous saluer !
+    ville: Bize-Minervois
+    localisation: '{"type":"Point","coordinates":[2.8692635,43.3136358]}'
   - date: 2022-08-06
     heure: 17:00
     description: >-
