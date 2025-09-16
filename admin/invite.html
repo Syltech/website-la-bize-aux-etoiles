@@ -1,0 +1,11 @@
+<h2>Site {{ .SiteURL }}</h2>
+
+<p>
+  Vous avez été invité à créer un utilisateur sur {{ .SiteURL }}. Cliquez sur le
+  lien suivant pour accepter l'invitation :
+</p>
+<p>
+  <a href="{{ .SiteURL }}/admin/#invite_token={{ .Token }}"
+    >Accepter l'invitation</a
+  >
+</p>
