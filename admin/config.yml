@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   branch: main
   repo: Syltech/website-la-bize-aux-etoiles
 local_backend: false
