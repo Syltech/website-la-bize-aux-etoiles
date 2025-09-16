@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
   repo: Syltech/website-la-bize-aux-etoiles
 local_backend: false
@@ -9,13 +9,13 @@ public_folder: "/img/uploads"
 collections:
   - label: "Général"
     name: "general"
-    editor: 
+    editor:
       preview: false
     files:
       - label: "Présentation"
         name: "presentation"
         file: "src/_data/presentation.yaml"
-        fields: 
+        fields:
           - label: "Accroche"
             required: true
             hint: "Phrase d'accroche en haut du site"
@@ -30,17 +30,17 @@ collections:
     name: "reunions_events"
     editor:
       preview: false
-    files: 
+    files:
       - label: "Reunions"
         name: "reunions"
         file: "src/_data/reunions.yaml"
-        fields: 
+        fields:
           - label: "Réunions"
             name: reunions
             widget: list
-            summary :  '{{fields.date}} - {{fields.descriptif}}'
+            summary: "{{fields.date}} - {{fields.descriptif}}"
             add_to_top: true
-            fields: 
+            fields:
               - label: Date
                 name: date
                 widget: datetime
@@ -50,7 +50,7 @@ collections:
               - label: Heure
                 name: heure
                 widget: string
-                pattern: ['\d{2}:\d{2}', 'doit être au format HH:MM']
+                pattern: ['\d{2}:\d{2}', "doit être au format HH:MM"]
               - label: Descriptif
                 name: descriptif
                 widget: string
@@ -58,13 +58,13 @@ collections:
       - label: "Evènements"
         name: "evenements"
         file: "src/_data/evenements.yaml"
-        fields: 
+        fields:
           - label: "Evènements"
             name: evenements
             widget: list
-            summary :  '{{fields.date}} - {{fields.ville}} - {{fields.titre}}'
+            summary: "{{fields.date}} - {{fields.ville}} - {{fields.titre}}"
             add_to_top: true
-            fields: 
+            fields:
               - label: Date
                 name: date
                 widget: datetime
@@ -74,7 +74,7 @@ collections:
               - label: Heure
                 name: heure
                 widget: string
-                pattern: ['\d{2}:\d{2}', 'doit être au format HH:MM']
+                pattern: ['\d{2}:\d{2}', "doit être au format HH:MM"]
               - label: Titre
                 name: titre
                 widget: string
@@ -94,4 +94,3 @@ collections:
               - label: Localisation
                 name: localisation
                 widget: map
-
